@@ -102,5 +102,16 @@ Route::group(['middleware' => 'apiJwt',], function () {
 
     });
 
+    Route::group(['prefix' => 'administradores'], function () {
+
+        Route::post('/usuario', [UsuarioController::class, 'gravar']);
+        Route::get('/usuario', [UsuarioController::class, 'table']);
+        Route::put('/usuario/{id}', [UsuarioController::class, 'editar']);
+        Route::delete('/usuario/{id}', [UsuarioController::class, 'remover']);
+
+
+
+    });
+
 
 });

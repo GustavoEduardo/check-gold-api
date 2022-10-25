@@ -19,4 +19,19 @@ class UsuarioController extends Controller
         return $this->repository->gravar($request);
     }
 
+    public function editar(Request $request, $id = null)
+    {
+        return $this->repository->editar($request,$id);
+    }
+
+    public function table(Request $request)
+    {
+        return $this->repository->table($request);
+    }
+
+    public function remover($id = null)
+    {
+        return $this->repository->remover($id);
+    }
+
 }
